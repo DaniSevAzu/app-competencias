@@ -128,6 +128,15 @@ npm run dev
 
 La aplicaci&oacute;n estar&aacute; disponible en [http://localhost:3000](http://localhost:3000).
 
+### Desarrollo vs Producci&oacute;n
+
+El servidor de desarrollo corre en el puerto **3000** (usa Turbopack, hot reload, etc.) mientras producci&oacute;n sigue corriendo en el **3701** v&iacute;a PM2. Son procesos independientes, cada uno con su puerto. Cuando termines de desarrollar, haz build y reinicia PM2 para que producci&oacute;n refleje los cambios:
+
+```bash
+npm run build
+pm2 restart competencias
+```
+
 ### Datos de Demo
 El seed crea un conjunto completo de datos para pruebas:
 - 3 usuarios (admin, evaluador, consulta)
